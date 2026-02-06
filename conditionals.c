@@ -1,3 +1,7 @@
+// Shorthand If-else (using ternary operator)
+// variable = (condition) ? expressionTrue : expressionFalse;
+// it uses three operands --> question mark is the ternary operator
+#include <stdbool.h>
 #include <stdio.h>
 
 int main() {
@@ -90,6 +94,37 @@ int main() {
     printf("nothing");
   } else {
     printf("%d", num1);
+  }
+
+  int currentTime = 20;
+  (currentTime < 18) ? printf("good day") : printf("good evening");
+
+  int userNum;
+  printf("Enter a number to check for even/odd: ");
+  scanf("%d", &userNum);
+  (userNum % 2 == 0) ? printf("even") : printf("odd");
+
+  bool isCitizen = true;
+  if (isCitizen) {
+  }
+
+  // Logical operators in conditions (&& II !, AND OR NOT)
+  if (isLoggedIn &&
+      (isAdmin ||
+       securityLevel <=
+           2)) { // What's the op precedence in this? && pehle then ||?
+  }
+
+  // switch statement --> selects one of many code blocks to be executed
+  switch (day) {
+  case 1:
+    printf("Monday");
+    break;
+  default: // aisa hota hai c mei --> yup it does
+    printf("Works when no case is matched");
+    break; // default should always be used at the end of switch statement and
+           // does not require a break
+    // break exists a switch block when the case is matched
   }
 
   return 0;
